@@ -1,0 +1,5 @@
+{
+    "item.tutorial.custom_item": "My Item",
+    "itemGroup.tutorial.test_group": "My Group",
+    "item.tutorial.custom_item.tooltip": "My Tooltip"
+}

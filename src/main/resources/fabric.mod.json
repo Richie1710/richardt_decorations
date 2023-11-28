@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "richardts_decorations",
+	"version": "${version}",
+	"name": "richardts_decorations",
+	"description": "This is the Minecraft Decorations of of Richardt Digital Solutions",
+	"authors": [
+		"Daniel Richardt"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/richardts_decorations/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"de.richardt.decorations.Richardts_decorations"
+		],
+		"client": [
+			"de.richardt.decorations.Richardts_decorationsClient"
+		]
+	},
+	"mixins": [
+		"richardts_decorations.mixins.json",
+		{
+			"config": "richardts_decorations.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.25",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
