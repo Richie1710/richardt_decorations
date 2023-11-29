@@ -26,9 +26,8 @@ public class Richardts_decorations implements ModInitializer {
     public static final TvItem TV_ITEM = new TvItem(new FabricItemSettings());
 	public static final ExampleBlock EXAMPLE_BLOCK  = new ExampleBlock(FabricBlockSettings.create().strength(4.0f).requiresTool());
 	public static final FloorLampBlock FLOORLAMPBLOCK = new FloorLampBlock(FabricBlockSettings.create().strength(4.0f).luminance(state -> state.get(FloorLampBlock.GLOWING) ? 15 : 0));
-	// public static final ChargeableBlock CHARGE_BLOCK = new ChargeableBlock(FabricBlockSettings.create().strength(4.0f));
+    public static final ThermoMixBlock THERMOMIXBLOCK = new ThermoMixBlock(FabricBlockSettings.create());
 	private static final ItemGroup ITEM_GROUP = FabricItemGroup.builder()
-    private static final ItemGroup ITEM_GROUP = FabricItemGroup.builder()
     	.icon(() -> new ItemStack(CUSTOM_ITEM))
     	.displayName(Text.translatable("itemGroup.tutorial.test_group"))
             .entries((context, entries) -> {
@@ -37,6 +36,7 @@ public class Richardts_decorations implements ModInitializer {
 			entries.add(EXAMPLE_BLOCK);
 			entries.add(ChargeableBlock.CHARGEABLE_BLOCK);
 			entries.add(FLOORLAMPBLOCK);
+			entries.add(THERMOMIXBLOCK);
 
     	})
     	.build();
@@ -59,5 +59,7 @@ public class Richardts_decorations implements ModInitializer {
         Registry.register(Registries.ITEM, new Identifier("tutorial", "chargeable_block"), new BlockItem(ChargeableBlock.CHARGEABLE_BLOCK, new FabricItemSettings()));
 		Registry.register(Registries.BLOCK, new Identifier("tutorial", "floor_lamp_block"), FLOORLAMPBLOCK);
         Registry.register(Registries.ITEM, new Identifier("tutorial", "floor_lamp_block"), new BlockItem(FLOORLAMPBLOCK, new FabricItemSettings()));
+		Registry.register(Registries.BLOCK, new Identifier("tutorial", "thermo_mix_block"), THERMOMIXBLOCK);
+        Registry.register(Registries.ITEM, new Identifier("tutorial", "thermo_mix_block"), new BlockItem(THERMOMIXBLOCK, new FabricItemSettings()));
 	}
 }

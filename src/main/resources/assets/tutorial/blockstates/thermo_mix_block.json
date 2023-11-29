@@ -1,0 +1,5 @@
+{
+    "variants": {
+      "": { "model": "tutorial:block/thermo_mix_block" }
+    }
+  }
