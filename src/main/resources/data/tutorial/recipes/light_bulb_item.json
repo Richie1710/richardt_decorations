@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "PPP",
+      "PWP",
+      " I "
+    ],
+    "key": {
+      "P": {
+        "item": "minecraft:glass_pane"
+      },
+      "W": {
+        "item": "minecraft:redstone"
+      },
+      "I":{
+        "item": "minecraft:iron_nugget"
+      }
+    },
+    "result": {
+      "item": "tutorial:light_bulb_item",
+      "count": 1
+    }
+  }
