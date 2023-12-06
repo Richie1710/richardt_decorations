@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "charged=false": { "model": "richardts_decorations:block/chargeable_block" },
+        "charged=true": { "model": "richardts_decorations:block/chargeable_block_charged" }
+    }
+}

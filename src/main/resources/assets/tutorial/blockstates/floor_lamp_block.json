@@ -1,8 +1,0 @@
-{
-    "variants": {
-        "facing=north" : { "model": "tutorial:block/floor_lamp_block" },
-        "facing=east" : { "model": "tutorial:block/floor_lamp_block", "y": 90 },
-        "facing=south" : { "model": "tutorial:block/floor_lamp_block", "y": 180 },
-        "facing=west" : { "model": "tutorial:block/floor_lamp_block", "y": 270 }
-    }
-}

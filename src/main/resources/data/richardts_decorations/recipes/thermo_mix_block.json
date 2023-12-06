@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      " B ",
+      "WRW",
+      "WQW"
+    ],
+    "key": {
+      "R":{
+        "item": "minecraft:redstone"
+      },
+      "B":{
+        "item": "minecraft:black_wool"
+      },
+      "W": {
+        "item": "minecraft:white_wool"
+      },
+      "Q":{
+        "item": "richardts_decorations:quad_blade_item"
+      }
+
+    },
+    "result": {
+      "item": "richardts_decorations:thermo_mix_block",
+      "count": 1
+    }
+}

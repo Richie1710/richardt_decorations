@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north" : { "model": "richardts_decorations:block/floor_lamp_block" },
+        "facing=east" : { "model": "richardts_decorations:block/floor_lamp_block", "y": 90 },
+        "facing=south" : { "model": "richardts_decorations:block/floor_lamp_block", "y": 180 },
+        "facing=west" : { "model": "richardts_decorations:block/floor_lamp_block", "y": 270 }
+    }
+}

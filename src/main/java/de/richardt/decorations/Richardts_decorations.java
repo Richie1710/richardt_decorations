@@ -31,8 +31,8 @@ public class Richardts_decorations implements ModInitializer {
     public static final ThermoMixBlock THERMOMIXBLOCK = new ThermoMixBlock(FabricBlockSettings.create());
 
 	private static final ItemGroup ITEM_GROUP = FabricItemGroup.builder()
-    	.icon(() -> new ItemStack(CUSTOM_ITEM))
-    	.displayName(Text.translatable("itemGroup.tutorial.test_group"))
+    	.icon(() -> new ItemStack(THERMOMIXBLOCK))
+    	.displayName(Text.translatable("itemGroup.richardts_decorations.test_group"))
             .entries((context, entries) -> {
     		entries.add(CUSTOM_ITEM);
 			entries.add(TV_ITEM);
@@ -53,20 +53,20 @@ public class Richardts_decorations implements ModInitializer {
 		// Proceed with mild caution.
 
 		LOGGER.info("Hello Fabric world!");
-		Registry.register(Registries.ITEM, new Identifier("tutorial", "custom_item"), CUSTOM_ITEM);
-		Registry.register(Registries.ITEM, new Identifier("tutorial", "light_bulb_item"), LIGHT_BULB_ITEM);
-		Registry.register(Registries.ITEM, new Identifier("tutorial", "quad_blade_item"), QUAD_BLADE_ITEM);
-		Registry.register(Registries.ITEM, new Identifier("tutorial", "tv"), TV_ITEM);
+		Registry.register(Registries.ITEM, new Identifier("richardts_decorations", "custom_item"), CUSTOM_ITEM);
+		Registry.register(Registries.ITEM, new Identifier("richardts_decorations", "light_bulb_item"), LIGHT_BULB_ITEM);
+		Registry.register(Registries.ITEM, new Identifier("richardts_decorations", "quad_blade_item"), QUAD_BLADE_ITEM);
+		Registry.register(Registries.ITEM, new Identifier("richardts_decorations", "tv"), TV_ITEM);
 		FuelRegistry.INSTANCE.add(CUSTOM_ITEM, 300);
 		CompostingChanceRegistry.INSTANCE.add(CUSTOM_ITEM, 100.0f);
-		Registry.register(Registries.ITEM_GROUP, new Identifier("tutorial", "test_group"), ITEM_GROUP);
-		Registry.register(Registries.BLOCK, new Identifier("tutorial", "example_block"), EXAMPLE_BLOCK);
-		Registry.register(Registries.ITEM, new Identifier("tutorial", "example_block"), new BlockItem(EXAMPLE_BLOCK, new FabricItemSettings()));
-		Registry.register(Registries.BLOCK, new Identifier("tutorial", "chargeable_block"), ChargeableBlock.CHARGEABLE_BLOCK);
-        Registry.register(Registries.ITEM, new Identifier("tutorial", "chargeable_block"), new BlockItem(ChargeableBlock.CHARGEABLE_BLOCK, new FabricItemSettings()));
-		Registry.register(Registries.BLOCK, new Identifier("tutorial", "floor_lamp_block"), FLOORLAMPBLOCK);
-        Registry.register(Registries.ITEM, new Identifier("tutorial", "floor_lamp_block"), new BlockItem(FLOORLAMPBLOCK, new FabricItemSettings()));
-		Registry.register(Registries.BLOCK, new Identifier("tutorial", "thermo_mix_block"), THERMOMIXBLOCK);
-        Registry.register(Registries.ITEM, new Identifier("tutorial", "thermo_mix_block"), new BlockItem(THERMOMIXBLOCK, new FabricItemSettings()));
+		Registry.register(Registries.ITEM_GROUP, new Identifier("richardts_decorations", "test_group"), ITEM_GROUP);
+		Registry.register(Registries.BLOCK, new Identifier("richardts_decorations", "example_block"), EXAMPLE_BLOCK);
+		Registry.register(Registries.ITEM, new Identifier("richardts_decorations", "example_block"), new BlockItem(EXAMPLE_BLOCK, new FabricItemSettings()));
+		Registry.register(Registries.BLOCK, new Identifier("richardts_decorations", "chargeable_block"), ChargeableBlock.CHARGEABLE_BLOCK);
+        Registry.register(Registries.ITEM, new Identifier("richardts_decorations", "chargeable_block"), new BlockItem(ChargeableBlock.CHARGEABLE_BLOCK, new FabricItemSettings()));
+		Registry.register(Registries.BLOCK, new Identifier("richardts_decorations", "floor_lamp_block"), FLOORLAMPBLOCK);
+        Registry.register(Registries.ITEM, new Identifier("richardts_decorations", "floor_lamp_block"), new BlockItem(FLOORLAMPBLOCK, new FabricItemSettings()));
+		Registry.register(Registries.BLOCK, new Identifier("richardts_decorations", "thermo_mix_block"), THERMOMIXBLOCK);
+        Registry.register(Registries.ITEM, new Identifier("richardts_decorations", "thermo_mix_block"), new BlockItem(THERMOMIXBLOCK, new FabricItemSettings()));
 	}
 }

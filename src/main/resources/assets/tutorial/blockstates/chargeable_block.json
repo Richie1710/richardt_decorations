@@ -1,6 +1,0 @@
-{
-    "variants": {
-        "charged=false": { "model": "tutorial:block/chargeable_block" },
-        "charged=true": { "model": "tutorial:block/chargeable_block_charged" }
-    }
-}

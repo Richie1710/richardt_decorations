@@ -1,8 +1,0 @@
-{
-    "variants": {
-      "facing=north": { "model": "tutorial:block/thermo_mix_block"},
-      "facing=east": { "model": "tutorial:block/thermo_mix_block", "y":  90},
-      "facing=south": { "model": "tutorial:block/thermo_mix_block", "y":  180},
-      "facing=west": { "model": "tutorial:block/thermo_mix_block", "y":  270}
-    }
-  }

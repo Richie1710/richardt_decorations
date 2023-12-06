@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+      "all": "richardts_decorations:block/chargeable_block_charged"
+    }
+}

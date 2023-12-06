@@ -29,9 +29,9 @@ public class CustomItem extends Item {
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
 
         // default white text
-        tooltip.add(Text.translatable("item.tutorial.custom_item.tooltip"));
+        tooltip.add(Text.translatable("item.richardts_decorations.custom_item.tooltip"));
 
         // formatted red text
-        tooltip.add(Text.translatable("item.tutorial.custom_item.tooltip").formatted(Formatting.RED));
+        tooltip.add(Text.translatable("item.richardts_decorations.custom_item.tooltip").formatted(Formatting.RED));
     }
 }
