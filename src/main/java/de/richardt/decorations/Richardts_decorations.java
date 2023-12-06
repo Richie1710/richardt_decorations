@@ -24,6 +24,7 @@ public class Richardts_decorations implements ModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger("richardts_decorations");
 	public static final CustomItem CUSTOM_ITEM = new CustomItem(new FabricItemSettings().maxCount(16));
 	public static final LightBulbItem LIGHT_BULB_ITEM = new LightBulbItem(new FabricItemSettings().maxCount(64));
+	public static final QuadBladeItem QUAD_BLADE_ITEM = new QuadBladeItem(new FabricItemSettings().maxCount(16));
     public static final TvItem TV_ITEM = new TvItem(new FabricItemSettings());
 	public static final ExampleBlock EXAMPLE_BLOCK  = new ExampleBlock(FabricBlockSettings.create().strength(4.0f).requiresTool());
 	public static final FloorLampBlock FLOORLAMPBLOCK = new FloorLampBlock(FabricBlockSettings.create().strength(4.0f).luminance(state -> state.get(FloorLampBlock.GLOWING) ? 15 : 0));
@@ -40,6 +41,7 @@ public class Richardts_decorations implements ModInitializer {
 			entries.add(FLOORLAMPBLOCK);
 			entries.add(THERMOMIXBLOCK);
 			entries.add(LIGHT_BULB_ITEM);
+			entries.add(QUAD_BLADE_ITEM);
 
     	})
     	.build();
@@ -53,6 +55,7 @@ public class Richardts_decorations implements ModInitializer {
 		LOGGER.info("Hello Fabric world!");
 		Registry.register(Registries.ITEM, new Identifier("tutorial", "custom_item"), CUSTOM_ITEM);
 		Registry.register(Registries.ITEM, new Identifier("tutorial", "light_bulb_item"), LIGHT_BULB_ITEM);
+		Registry.register(Registries.ITEM, new Identifier("tutorial", "quad_blade_item"), QUAD_BLADE_ITEM);
 		Registry.register(Registries.ITEM, new Identifier("tutorial", "tv"), TV_ITEM);
 		FuelRegistry.INSTANCE.add(CUSTOM_ITEM, 300);
 		CompostingChanceRegistry.INSTANCE.add(CUSTOM_ITEM, 100.0f);
