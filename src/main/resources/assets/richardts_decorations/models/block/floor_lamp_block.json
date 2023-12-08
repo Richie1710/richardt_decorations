@@ -5,7 +5,7 @@
 		"1": "richardts_decorations:block/floor_lamp/fuss",
 		"2": "richardts_decorations:block/floor_lamp/schirm",
 		"3": "richardts_decorations:block/floor_lamp/stange",
-		"particle": "fuss"
+		"particle": "richardts_decorations:block/floor_lamp/fuss"
 	},
 	"elements": [
 		{
