@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#",
+        "B"
+    ],
+    "key": {
+        "#": {"item": "minecraft:coal"},
+        "B": {"item": "minecraft:water_bucket"}
+    },
+    "result": {
+        "item": "richardts_decorations:cleaned_coal",
+        "count": 1
+    },
+    "group": "cleaned_coal",
+    "conditions": [
+        {
+            "condition": "minecraft:recipe_ingredient",
+            "ingredient": {
+                "item": "minecraft:water_bucket"
+            }
+        }
+    ]
+}

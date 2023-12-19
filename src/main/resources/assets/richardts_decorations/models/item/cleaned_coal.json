@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+      "layer0": "richardts_decorations:item/cleaned_coal"
+    }
+  }
