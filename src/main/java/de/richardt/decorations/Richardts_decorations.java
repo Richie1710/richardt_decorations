@@ -30,7 +30,7 @@ public class Richardts_decorations implements ModInitializer {
     public static final TvItem TV_ITEM = new TvItem(new FabricItemSettings());
 	public static final ExampleBlock EXAMPLE_BLOCK  = new ExampleBlock(FabricBlockSettings.create().strength(4.0f).requiresTool());
 	public static final FloorLampBlock FLOORLAMPBLOCK = new FloorLampBlock(FabricBlockSettings.create().strength(4.0f).luminance(state -> state.get(FloorLampBlock.GLOWING) ? 15 : 0));
-    public static final ThermoMixBlock THERMOMIXBLOCK = new ThermoMixBlock(FabricBlockSettings.create());
+    public static final ThermoMixBlock THERMOMIXBLOCK = new ThermoMixBlock(FabricBlockSettings.create().strength(4.0f));
 	public static final NotebookBlock NOTEBOOKBLOCK = new NotebookBlock(FabricBlockSettings.create().strength(4.0f));
 	private static final ItemGroup ITEM_GROUP = FabricItemGroup.builder()
     	.icon(() -> new ItemStack(THERMOMIXBLOCK))
