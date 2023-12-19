@@ -59,8 +59,8 @@ public class Richardts_decorations implements ModInitializer {
 
 		LOGGER.info("Hello Fabric world!");
 		Registry.register(Registries.ITEM, new Identifier("richardts_decorations", "custom_item"), CUSTOM_ITEM);
-		Registry.register(Registries.ITEM, new Identifier("richardts_decorations", "cleaned_coal"), CLEANED_COAL_ITEM);
-		Registry.register(Registries.ITEM, new Identifier("richardts_decorations", "plastic"), PLASTIC_ITEM);
+		Registry.register(Registries.ITEM, new Identifier("richardts_decorations", "cleaned_coal_item"), CLEANED_COAL_ITEM);
+		Registry.register(Registries.ITEM, new Identifier("richardts_decorations", "plastic_item"), PLASTIC_ITEM);
 		Registry.register(Registries.ITEM, new Identifier("richardts_decorations", "light_bulb_item"), LIGHT_BULB_ITEM);
 		Registry.register(Registries.ITEM, new Identifier("richardts_decorations", "quad_blade_item"), QUAD_BLADE_ITEM);
 		Registry.register(Registries.ITEM, new Identifier("richardts_decorations", "tv"), TV_ITEM);

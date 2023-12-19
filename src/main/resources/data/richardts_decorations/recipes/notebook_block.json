@@ -10,7 +10,7 @@
         "item": "minecraft:redstone"
       },
       "P": {
-        "item": "richardts_decorations:plastic"
+        "item": "richardts_decorations:plastic_item"
       }
     },
     "result": {

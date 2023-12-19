@@ -9,7 +9,7 @@
         "B": {"item": "minecraft:water_bucket"}
     },
     "result": {
-        "item": "richardts_decorations:cleaned_coal",
+        "item": "richardts_decorations:cleaned_coal_item",
         "count": 1
     },
     "group": "cleaned_coal",

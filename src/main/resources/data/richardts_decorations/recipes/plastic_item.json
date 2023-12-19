@@ -1,9 +1,9 @@
 {
     "type": "minecraft:smelting",
     "ingredient": {
-        "item": "richardts_decorations:cleaned_coal"
+        "item": "richardts_decorations:cleaned_coal_item"
     },
-    "result": "richardts_decorations:plastic",
+    "result": "richardts_decorations:plastic_item",
     "experience": 0.35,
     "cookingtime": 200
 }

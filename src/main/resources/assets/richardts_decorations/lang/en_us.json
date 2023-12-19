@@ -1,7 +1,7 @@
 {
     "item.richardts_decorations.custom_item": "My Item",
-    "item.richardts_decorations.cleaned_coal": "Cleaned Coal",
-    "item.richardts_decorations.plastic": "Plastic",
+    "item.richardts_decorations.cleaned_coal_item": "Cleaned Coal",
+    "item.richardts_decorations.plastic_item": "Plastic",
     "item.richardts_decorations.light_bulb_item": "Light Bulb",
     "item.richardts_decorations.quad_blade_item": "Quad Blade",
     "block.richardts_decorations.thermo_mix_block": "Thermomix",
