@@ -10,7 +10,7 @@
         "item": "minecraft:redstone"
       },
       "B":{
-        "item": "minecraft:black_wool"
+        "item": "minecraft:black_dye"
       },
       "W": {
         "item": "richardts_decorations:plastic_item"
