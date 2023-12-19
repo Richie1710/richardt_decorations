@@ -73,7 +73,7 @@ jobs:
       - name: Find JAR File
         id: find_jar
         run: |
-          JAR_FILE=$(ls build/libs/richardts_decorations-*.jar)
+          JAR_FILE=$(ls build/libs/richardts_decorations-*.jar | grep -v -- '-sources.jar' | xargs -n 1 basename)
           echo "::set-output name=jar_file::$JAR_FILE"
           echo "Found JAR file: $JAR_FILE"
 
@@ -83,6 +83,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ${{ steps.find_jar.outputs.jar_file }}
+          asset_path: ./build/libs/${{ steps.find_jar.outputs.jar_file }}
           asset_name: ${{ steps.find_jar.outputs.jar_file }}
           asset_content_type: application/java-archive
