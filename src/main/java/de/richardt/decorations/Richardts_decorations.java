@@ -24,6 +24,7 @@ public class Richardts_decorations implements ModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger("richardts_decorations");
 	public static final CustomItem CUSTOM_ITEM = new CustomItem(new FabricItemSettings().maxCount(16));
 	public static final CleanedCoalItem CLEANED_COAL_ITEM = new CleanedCoalItem(new FabricItemSettings());
+	public static final PlasticItem PLASTIC_ITEM = new PlasticItem(new FabricItemSettings());
 	public static final LightBulbItem LIGHT_BULB_ITEM = new LightBulbItem(new FabricItemSettings().maxCount(64));
 	public static final QuadBladeItem QUAD_BLADE_ITEM = new QuadBladeItem(new FabricItemSettings().maxCount(16));
     public static final TvItem TV_ITEM = new TvItem(new FabricItemSettings());
@@ -37,6 +38,7 @@ public class Richardts_decorations implements ModInitializer {
             .entries((context, entries) -> {
     		entries.add(CUSTOM_ITEM);
 			entries.add(CLEANED_COAL_ITEM);
+			entries.add(PLASTIC_ITEM);
 			entries.add(TV_ITEM);
 			entries.add(EXAMPLE_BLOCK);
 			entries.add(ChargeableBlock.CHARGEABLE_BLOCK);
@@ -57,6 +59,7 @@ public class Richardts_decorations implements ModInitializer {
 		LOGGER.info("Hello Fabric world!");
 		Registry.register(Registries.ITEM, new Identifier("richardts_decorations", "custom_item"), CUSTOM_ITEM);
 		Registry.register(Registries.ITEM, new Identifier("richardts_decorations", "cleaned_coal"), CLEANED_COAL_ITEM);
+		Registry.register(Registries.ITEM, new Identifier("richardts_decorations", "plastic"), PLASTIC_ITEM);
 		Registry.register(Registries.ITEM, new Identifier("richardts_decorations", "light_bulb_item"), LIGHT_BULB_ITEM);
 		Registry.register(Registries.ITEM, new Identifier("richardts_decorations", "quad_blade_item"), QUAD_BLADE_ITEM);
 		Registry.register(Registries.ITEM, new Identifier("richardts_decorations", "tv"), TV_ITEM);
