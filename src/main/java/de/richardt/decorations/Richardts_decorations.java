@@ -4,8 +4,10 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
+import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -34,6 +36,12 @@ public class Richardts_decorations implements ModInitializer {
 	public static final FloorLampBlock FLOORLAMPBLOCK = new FloorLampBlock(FabricBlockSettings.create().strength(4.0f).luminance(state -> state.get(FloorLampBlock.GLOWING) ? 15 : 0));
     public static final ThermoMixBlock THERMOMIXBLOCK = new ThermoMixBlock(FabricBlockSettings.create().strength(4.0f));
 	public static final NotebookBlock NOTEBOOKBLOCK = new NotebookBlock(FabricBlockSettings.create().strength(4.0f));
+	public static final DemoBlock DEMO_BLOCK = new DemoBlock(FabricBlockSettings.create());
+    public static final BlockEntityType<DemoBlockEntity> DEMO_BLOCK_ENTITY = Registry.register(
+        Registries.BLOCK_ENTITY_TYPE,
+        new Identifier("richardts_decorations", "demo_block_entity"),
+        FabricBlockEntityTypeBuilder.create(DemoBlockEntity::new, DEMO_BLOCK).build()
+    );
 	private static final ItemGroup ITEM_GROUP = FabricItemGroup.builder()
     	.icon(() -> new ItemStack(THERMOMIXBLOCK))
     	.displayName(Text.translatable("itemGroup.richardts_decorations.test_group"))
@@ -49,6 +57,7 @@ public class Richardts_decorations implements ModInitializer {
 			entries.add(NOTEBOOKBLOCK);
 			entries.add(LIGHT_BULB_ITEM);
 			entries.add(QUAD_BLADE_ITEM);
+			entries.add(DEMO_BLOCK);
 			entries.add(TV_BLOCK);
 			entries.add(TV_BLOCK_LARGE);
 
@@ -85,5 +94,7 @@ public class Richardts_decorations implements ModInitializer {
         Registry.register(Registries.ITEM, new Identifier("richardts_decorations", "thermo_mix_block"), new BlockItem(THERMOMIXBLOCK, new FabricItemSettings()));
 		Registry.register(Registries.BLOCK, new Identifier("richardts_decorations", "notebook_block"), NOTEBOOKBLOCK);
         Registry.register(Registries.ITEM, new Identifier("richardts_decorations", "notebook_block"), new BlockItem(NOTEBOOKBLOCK, new FabricItemSettings()));
+		Registry.register(Registries.BLOCK, new Identifier("richardts_decorations", "demo_block"), DEMO_BLOCK);
+        Registry.register(Registries.ITEM, new Identifier("richardts_decorations", "demo_block"), new BlockItem(DEMO_BLOCK, new FabricItemSettings()));
 	}
 }
