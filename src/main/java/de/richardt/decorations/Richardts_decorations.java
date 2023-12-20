@@ -28,6 +28,7 @@ public class Richardts_decorations implements ModInitializer {
 	public static final LightBulbItem LIGHT_BULB_ITEM = new LightBulbItem(new FabricItemSettings().maxCount(64));
 	public static final QuadBladeItem QUAD_BLADE_ITEM = new QuadBladeItem(new FabricItemSettings().maxCount(16));
     public static final TvItem TV_ITEM = new TvItem(new FabricItemSettings());
+	public static final TVBlock TV_BLOCK = new TVBlock(FabricBlockSettings.create().strength(4.0f).luminance(state -> state.get(TVBlock.POWER) ? 7 : 0));
 	public static final ExampleBlock EXAMPLE_BLOCK  = new ExampleBlock(FabricBlockSettings.create().strength(4.0f).requiresTool());
 	public static final FloorLampBlock FLOORLAMPBLOCK = new FloorLampBlock(FabricBlockSettings.create().strength(4.0f).luminance(state -> state.get(FloorLampBlock.GLOWING) ? 15 : 0));
     public static final ThermoMixBlock THERMOMIXBLOCK = new ThermoMixBlock(FabricBlockSettings.create().strength(4.0f));
@@ -47,6 +48,7 @@ public class Richardts_decorations implements ModInitializer {
 			entries.add(NOTEBOOKBLOCK);
 			entries.add(LIGHT_BULB_ITEM);
 			entries.add(QUAD_BLADE_ITEM);
+			entries.add(TV_BLOCK);
 
     	})
     	.build();
@@ -73,6 +75,8 @@ public class Richardts_decorations implements ModInitializer {
         Registry.register(Registries.ITEM, new Identifier("richardts_decorations", "chargeable_block"), new BlockItem(ChargeableBlock.CHARGEABLE_BLOCK, new FabricItemSettings()));
 		Registry.register(Registries.BLOCK, new Identifier("richardts_decorations", "floor_lamp_block"), FLOORLAMPBLOCK);
         Registry.register(Registries.ITEM, new Identifier("richardts_decorations", "floor_lamp_block"), new BlockItem(FLOORLAMPBLOCK, new FabricItemSettings()));
+		Registry.register(Registries.BLOCK, new Identifier("richardts_decorations", "tv_block"), TV_BLOCK);
+        Registry.register(Registries.ITEM, new Identifier("richardts_decorations", "tv_block"), new BlockItem(TV_BLOCK, new FabricItemSettings()));
 		Registry.register(Registries.BLOCK, new Identifier("richardts_decorations", "thermo_mix_block"), THERMOMIXBLOCK);
         Registry.register(Registries.ITEM, new Identifier("richardts_decorations", "thermo_mix_block"), new BlockItem(THERMOMIXBLOCK, new FabricItemSettings()));
 		Registry.register(Registries.BLOCK, new Identifier("richardts_decorations", "notebook_block"), NOTEBOOKBLOCK);
