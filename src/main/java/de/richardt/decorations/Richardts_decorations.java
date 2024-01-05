@@ -36,7 +36,7 @@ public class Richardts_decorations implements ModInitializer {
 	public static final FloorLampBlock FLOORLAMPBLOCK = new FloorLampBlock(FabricBlockSettings.create().strength(4.0f).luminance(state -> state.get(FloorLampBlock.GLOWING) ? 15 : 0));
     public static final ThermoMixBlock THERMOMIXBLOCK = new ThermoMixBlock(FabricBlockSettings.create().strength(4.0f));
 	public static final NotebookBlock NOTEBOOKBLOCK = new NotebookBlock(FabricBlockSettings.create().strength(4.0f));
-	public static final MicrowaveBlock MICROWAVE_BLOCK = new MicrowaveBlock(FabricBlockSettings.create().strength(4.0f).luminance(state -> state.get(MicrowaveBlock.POWER) ? 8 : 0));;
+	public static final MicrowaveBlock MICROWAVE_BLOCK = new MicrowaveBlock(FabricBlockSettings.create().strength(4.0f).luminance(state -> state.get(MicrowaveBlock.LIT) ? 8 : 0));;
 	public static final BlockEntityType<MicrowaveBlockEntity> MICROWAVE_BLOCK_ENTITY = Registry.register(
 		Registries.BLOCK_ENTITY_TYPE, new Identifier("richardts_decorations", "microwave_block_entity"),
 		FabricBlockEntityTypeBuilder.create(MicrowaveBlockEntity::new, MICROWAVE_BLOCK).build()

@@ -36,10 +36,11 @@ import org.jetbrains.annotations.Nullable;
 public class MicrowaveBlock extends BlockWithEntity  {
     public static final BooleanProperty POWER = BooleanProperty.of("power");
     private static final DirectionProperty FACING = HorizontalFacingBlock.FACING;
+    public static final BooleanProperty LIT = RedstoneTorchBlock.LIT;
 
     public MicrowaveBlock(Settings settings) {
         super(settings);
-        setDefaultState(getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH).with(POWER, false));
+        setDefaultState(getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH).with(LIT, false));
     }
     @Nullable
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
@@ -59,14 +60,13 @@ public class MicrowaveBlock extends BlockWithEntity  {
 
 	@Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder){
-        builder.add(Properties.HORIZONTAL_FACING);
-		builder.add(POWER);
+        builder.add(FACING, LIT);
     }
 
     @Environment(EnvType.CLIENT)
     @Override
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
-        if (state.get(POWER)) {
+        if (state.get(LIT)) {
             double x = (double) pos.getX() + 0.5D;
             double y = (double) pos.getY();
             double z = (double) pos.getZ() + 0.5D;
@@ -91,19 +91,9 @@ public class MicrowaveBlock extends BlockWithEntity  {
 		return super.getPlacementState(ctx).with(Properties.HORIZONTAL_FACING, ctx.getHorizontalPlayerFacing().getOpposite());
 	}
 
-	// @Override
-    // public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-    //     player.playSound(SoundEvents.BLOCK_LEVER_CLICK, 1, 1);
-	// 	if(!world.isClient() && hand == Hand.MAIN_HAND) {
-	// 		world.setBlockState(pos, state.cycle(POWER));
-	// 	}
-    //     return ActionResult.SUCCESS;
-    // }
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (!world.isClient) {
-            player.playSound(SoundEvents.BLOCK_LEVER_CLICK, 1, 1);
-            world.setBlockState(pos, state.cycle(POWER));
             this.openContainer(world, pos, player);
         }
 
