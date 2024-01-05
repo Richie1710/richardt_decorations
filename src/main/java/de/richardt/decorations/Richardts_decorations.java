@@ -4,8 +4,10 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
+import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -34,6 +36,11 @@ public class Richardts_decorations implements ModInitializer {
 	public static final FloorLampBlock FLOORLAMPBLOCK = new FloorLampBlock(FabricBlockSettings.create().strength(4.0f).luminance(state -> state.get(FloorLampBlock.GLOWING) ? 15 : 0));
     public static final ThermoMixBlock THERMOMIXBLOCK = new ThermoMixBlock(FabricBlockSettings.create().strength(4.0f));
 	public static final NotebookBlock NOTEBOOKBLOCK = new NotebookBlock(FabricBlockSettings.create().strength(4.0f));
+	public static final MicrowaveBlock MICROWAVE_BLOCK = new MicrowaveBlock(FabricBlockSettings.create().strength(4.0f).luminance(state -> state.get(MicrowaveBlock.POWER) ? 8 : 0));;
+	public static final BlockEntityType<MicrowaveBlockEntity> MICROWAVE_BLOCK_ENTITY = Registry.register(
+		Registries.BLOCK_ENTITY_TYPE, new Identifier("richardts_decorations", "microwave_block_entity"),
+		FabricBlockEntityTypeBuilder.create(MicrowaveBlockEntity::new, MICROWAVE_BLOCK).build()
+	);
 	private static final ItemGroup ITEM_GROUP = FabricItemGroup.builder()
     	.icon(() -> new ItemStack(THERMOMIXBLOCK))
     	.displayName(Text.translatable("itemGroup.richardts_decorations.test_group"))
@@ -51,6 +58,7 @@ public class Richardts_decorations implements ModInitializer {
 			entries.add(QUAD_BLADE_ITEM);
 			entries.add(TV_BLOCK);
 			entries.add(TV_BLOCK_LARGE);
+			entries.add(MICROWAVE_BLOCK);
 
     	})
     	.build();
@@ -85,5 +93,7 @@ public class Richardts_decorations implements ModInitializer {
         Registry.register(Registries.ITEM, new Identifier("richardts_decorations", "thermo_mix_block"), new BlockItem(THERMOMIXBLOCK, new FabricItemSettings()));
 		Registry.register(Registries.BLOCK, new Identifier("richardts_decorations", "notebook_block"), NOTEBOOKBLOCK);
         Registry.register(Registries.ITEM, new Identifier("richardts_decorations", "notebook_block"), new BlockItem(NOTEBOOKBLOCK, new FabricItemSettings()));
+		Registry.register(Registries.BLOCK, new Identifier("richardts_decorations", "microwave_block"), MICROWAVE_BLOCK);
+		Registry.register(Registries.ITEM, new Identifier("richardts_decorations", "microwave_block"), new BlockItem(MICROWAVE_BLOCK, new FabricItemSettings()));
 	}
 }

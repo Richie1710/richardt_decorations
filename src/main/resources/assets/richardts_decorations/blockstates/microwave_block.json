@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "facing=north,power=false": { "model": "richardts_decorations:block/microwave_block_off" },
+        "facing=east,power=false" : { "model": "richardts_decorations:block/microwave_block_off", "y": 90 },
+        "facing=south,power=false": { "model": "richardts_decorations:block/microwave_block_off", "y": 180 },
+        "facing=west,power=false" : { "model": "richardts_decorations:block/microwave_block_off", "y": 270 },
+        "facing=north,power=true" : { "model": "richardts_decorations:block/microwave_block_on" },
+        "facing=east,power=true" : { "model": "richardts_decorations:block/microwave_block_on", "y": 90 },
+        "facing=south,power=true": { "model": "richardts_decorations:block/microwave_block_on", "y": 180 },
+        "facing=west,power=true" : { "model": "richardts_decorations:block/microwave_block_on", "y": 270 }
+    }
+}

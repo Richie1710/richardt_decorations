@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "PPG",
+      "BRG",
+      "PPG"
+    ],
+    "key": {
+      "R":{
+        "item": "minecraft:redstone"
+      },
+      "B":{
+        "item": "richardts_decorations:light_bulb_item"
+      },
+      "P": {
+        "item": "richardts_decorations:plastic_item"
+      },
+      "G":{
+        "item": "minecraft:glass_pane"
+      }
+
+    },
+    "result": {
+      "item": "richardts_decorations:microwave_block",
+      "count": 1
+    }
+}
